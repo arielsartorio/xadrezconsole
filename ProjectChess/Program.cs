@@ -18,6 +18,12 @@ namespace ProjectChess
                 tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(2, 4));
 
                 Tela.imprimirTabuleiro(tab);
+
+                Console.WriteLine();
+                PosicaoXadrez pos = new PosicaoXadrez('e', 5);
+                Console.WriteLine(pos);
+                Console.WriteLine();
+                Console.WriteLine(pos.toPosicao());
             }
             catch (TabuleiroException e)
             {
