@@ -15,6 +15,24 @@
             QteMovimentos = 0;
         }
 
+        public bool existeMovimentosPossiveis()
+        {
+            bool[,] mat = movimentosPossiveis();
+            foreach (bool item in mat)
+            {
+                if (item)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool podeMoverPara(Posicao pos)
+        {
+            return movimentosPossiveis()[pos.Linha, pos.Coluna];
+        }
+
         public abstract bool[,] movimentosPossiveis();
 
         public void incrementarMovimento()
