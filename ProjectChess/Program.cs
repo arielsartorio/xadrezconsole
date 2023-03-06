@@ -42,7 +42,8 @@ namespace ProjectChess
                         Console.ReadLine();
                     }
                 }
-
+                Console.Clear();
+                Tela.imprimirPartida(partida);
                 Console.ReadLine();
             }
             catch (TabuleiroException e)
