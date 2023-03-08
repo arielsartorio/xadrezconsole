@@ -120,5 +120,11 @@ namespace ProjectChess
                 Console.Write(" ");
             }
         }
+
+        public static char escolherPromocao()
+        {
+            Console.Write("Para qual peça deseja promover (t/c/b/d)? ");
+            return char.Parse(Console.ReadLine());
+        }
     }
 }
