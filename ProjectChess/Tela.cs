@@ -93,6 +93,18 @@ namespace ProjectChess
         public static PosicaoXadrez lerPosicaoXadrez()
         {
             string s = Console.ReadLine();
+            if (s.Length != 2)
+            {
+                throw new TabuleiroException("Posição digitada incorretamente!");
+            }
+            if (s[0] < 'a' || s[0] > 'h')
+            {
+                throw new TabuleiroException("Coluna da posição escolhida não existe!");
+            }
+            if (s[1] < 1 || s[1] > 8)
+            {
+                throw new TabuleiroException("Linha da posição escolhida não existe!");
+            }
             char coluna = s[0];
             int linha = int.Parse(s[1] + "");
             return new PosicaoXadrez(coluna, linha);
